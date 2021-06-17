@@ -8,7 +8,7 @@
     To run the application, run the docker container on a machine with CUDA support.
 
     Command used for starting the container. 
-    1. sudo docker run -d --gpus all -p <IMAGE ID>
+    1. sudo docker run -d --gpus all <IMAGE ID>
 
     Command used for getting to the image.
     2. sudo docker exec -it <CONTAINER ID> /bin/bash
@@ -18,6 +18,8 @@
 
     Command used for performing the tests.
     4. pytest -v src/test.py
+
+    NOTE: In order to get the <IMAGE ID> and <CONTAINER ID>, run: sudo docker image ls OR sudo docker container ls
 
 ### What Libraries/ Programming languages/Algorithms you used and why?
 

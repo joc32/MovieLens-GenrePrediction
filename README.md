@@ -2,7 +2,7 @@
 
 ### How to Run it (Dont assume everything is installed) ?
 
-    The docker image was succesfuly tested on a GCP instance on Nvidia T4 GPU.
+    The docker image was succesfuly deployed and tested on a GCP instance on Nvidia T4 GPU.
     The image consists of Pytorch-gpu-devel and Python3.7.5-slim.
 
     To run the application, run the docker container on a machine with CUDA support.
@@ -11,15 +11,13 @@
     1. sudo docker run -d --gpus all -p <IMAGE ID>
 
     Command used for getting to the image.
-    2. sudo docker exec -it /bin/bash <IMAGE ID>
+    2. sudo docker exec -it <CONTAINER ID> /bin/bash
 
     Command used for performing the inference.
     3. python3 src/inference.py --title "Othello" --description "The evil iago pretends to be friend of Othello in order to manipulate him to serve his own end in the film version of the Shakespeare classic"
 
     Command used for performing the tests.
-    4. pytest src/test.py
-
-    The flask wrapper just serves as an infinite loop which allows us to get into the image and perform commands without the container stopping.
+    4. pytest -v src/test.py
 
 ### What Libraries/ Programming languages/Algorithms you used and why?
 
@@ -31,9 +29,5 @@
 
     I attach a jupyter notebook with entire pipeline (Load Data, EDA, Preprocessing, Training, Testing, and performing Inference.)
 
-    To reproduce my work: 
-
-    1. Upload the notebook to google colab and run it on a GPU instance. 
-    2. Download the data from the link, and Train the model. 
-    3. Download the weights after training and put them to src/ folder
-    4. Load the weights locally and run src/app.py (Make sure your machine has CUDA support, otherwise the code won't work)
+    To reproduce my work upload the dataset and Jupyter notebook to google colab GPU instance.
+    Run all cells including training (should take around 40 minutes).

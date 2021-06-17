@@ -1,7 +1,5 @@
 import argparse
 import torch
-import transformers
-
 import os.path
 
 from google_drive_downloader import GoogleDriveDownloader as gdd
@@ -47,7 +45,6 @@ def main(argv=None):
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    max_length = 100
     tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', do_lower_case=True) # tokenizer
     encoded = tokenizer.encode_plus(args['description'], max_length=100, pad_to_max_length = True)
 

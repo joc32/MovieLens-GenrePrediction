@@ -14,7 +14,7 @@
     2. sudo docker exec -it /bin/bash <IMAGE ID>
 
     Command used for performing the inference.
-    3. python3 src/inference.py --title "Othello" --description "The evil iago pretends to be friend of Othello"
+    3. python3 src/inference.py --title "Othello" --description "The evil iago pretends to be friend of Othello in order to manipulate him to serve his own end in the film version of the Shakespeare classic"
 
     Command used for performing the tests.
     4. pytest src/test.py
